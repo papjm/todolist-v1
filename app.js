@@ -1,15 +1,15 @@
 ///jshint  esversion:6
-const express = require("express ");
-const bodyParser = require("bodyParser");
+const express = require("express");
+const bodyParser = require("body-parser");
 
 const app = express();
 
 app.get("/", function(req, res) {
 var today = new Date();
 if (today.getDay() === 6 || today.getDay() === 0) {
-  res.send("yay it's the weekened")
+  res.sendFile(__dirname + "index.html")
 } else {
-  res.send("hahaha!! take your lazya ass to work")
+  res.sendFile(__dirname + "/index.html");
 }
 
 
