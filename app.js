@@ -4,8 +4,9 @@ const bodyParser = require("bodyParser");
 
 const app = express();
 
-app.get("/", function() {
-  res.send("Hello");
+app.get("/", function(req, res) {
+var today = new Date();
+if (today.getDay() === 6 || today.getDay() === 0)
 
 });
 
